@@ -1,12 +1,13 @@
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, Heading } from '@chakra-ui/react';
 import React from 'react';
 
-import WelcomeMessage from 'components/WelcomeMessage';
+import Spreadsheet from 'components/Spreadsheet';
 
 export default function App() {
   return (
     <ChakraProvider resetCSS>
-      <WelcomeMessage />
+      <Heading marginBottom="2rem">Spreadsheet</Heading>
+      <Spreadsheet />
     </ChakraProvider>
   );
 }

@@ -11,9 +11,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:import/typescript',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
+    'plugin:@next/next/recommended',
     'prettier',
   ],
   globals: {
@@ -105,23 +103,18 @@ module.exports = {
     'react/display-name': 'off',
     'react/require-default-props': 'off',
     'react/no-unused-prop-types': 'off',
-    'react/jsx-filename-extension': ['error', { extensions: ['.tsx', '.jsx'] }],
+    'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
+    'react/jsx-filename-extension': [2, { extensions: ['.tsx', '.jsx'] }],
+    'react/jsx-fragments': ['error', 'syntax'],
+    'react/jsx-newline': ['error', { prevent: true }],
+    'react/jsx-no-script-url': 'error',
+    'react/jsx-no-target-blank': 'error',
     'react/jsx-no-useless-fragment': 'error',
     'react/jsx-pascal-case': 'error',
-    'react/jsx-fragments': ['error', 'syntax'],
     'react/jsx-wrap-multilines': ['error', { prop: 'ignore' }],
-    'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
     'react/self-closing-comp': 'error',
 
     'import/extensions': ['error', 'never'],
-    'import/order': [
-      'error',
-      {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'unknown'],
-        'newlines-between': 'always',
-        alphabetize: { order: 'asc' },
-      },
-    ],
 
     // these are a bit overly picky in a timed environment
     '@typescript-eslint/explicit-module-boundary-types': 'off',
